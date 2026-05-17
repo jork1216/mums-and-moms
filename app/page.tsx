@@ -81,11 +81,11 @@ export default function Home() {
         <h2 className={`${serifRegular.className} text-[1.80rem] leading-[1.08]`}>
           Trusted Flower Shop for
           <br />
-          <span className="font-semibold text-[#C9828B]">Meaningful Gifting</span>
+          <span className="font-semibold text-[#c77782]">Meaningful Gifting</span>
         </h2>
 
         <div className="mx-auto mt-4 flex w-44 items-center gap-3" aria-hidden="true">
-          <span className="h-px flex-1 bg-[#874c54]" />
+          <span className="h-px flex-1 bg-[#C9828B]" />
           <Image
             src="/heart.png"
             alt=""
