@@ -46,7 +46,7 @@ export default function Home() {
 
             <a
               href="#"
-              className="inline-flex items-center gap-2.5 rounded-full border-2 border-white bg-[#d35570] px-5 py-2.5 text-xs font-semibold text-white shadow-[0px_3px_0_#b94861]"
+              className="inline-flex items-center gap-2.5 rounded-full border-2 border-white bg-[#d35570] px-5 py-2.5 text-xs font-semibold text-white shadow-[0px_2px_0_#b94861]"
             >
               SHOP BLOOMS
               <svg
@@ -79,7 +79,7 @@ export default function Home() {
               alt="Handcrafted floral bouquet"
               fill
               sizes="(max-width: 500px) 44vw, 220px"
-              className="z-10 translate-y-2 scale-[1.55] object-contain"
+              className="z-10 translate-y-2 scale-[1.65] object-contain"
             />
           </div>
         </div>
@@ -124,7 +124,7 @@ export default function Home() {
             <span className="h-px flex-1 bg-[#C9828B]" />
           </div>
 
-          <p className={`${montserrat.className} mx-auto mt-4 max-w-[340px] text-xs font-medium leading-5 text-[#2B2B2B]/75`}>
+          <p className={`${montserrat.className} mx-auto mt-4 max-w-[400px] text-[0.68rem] font-medium leading-4.5 text-black/75`}>
             At Mums &amp; Mom Flower Shop, we create handcrafted bouquets
             with premium blooms and passion.
             <br />
