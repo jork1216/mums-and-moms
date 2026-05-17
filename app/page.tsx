@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { heroSerif, montserrat } from "./fonts";
+import { heroSerif, montserrat, serifRegular } from "./fonts";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
@@ -77,26 +77,26 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-[#FFFDFB] px-5 py-10 text-center text-[#2B2B2B]">
-        <h2 className={`${heroSerif.className} text-[2.55rem] leading-[1.08]`}>
+      <section className="bg-[#FFFDFB] px-5 py-8 text-center text-[#2B2B2B]">
+        <h2 className={`${serifRegular.className} text-[1.80rem] leading-[1.08]`}>
           Trusted Flower Shop for
           <br />
           <span className="text-[#C9828B]">Meaningful Gifting</span>
         </h2>
 
-        <div className="mx-auto mt-4 flex w-32 items-center gap-3" aria-hidden="true">
-          <span className="h-px flex-1 bg-[#E8CFCB]" />
+        <div className="mx-auto mt-4 flex w-44 items-center gap-3" aria-hidden="true">
+          <span className="h-px flex-1 bg-[#C9828B]" />
           <Image
             src="/heart.png"
             alt=""
-            width={16}
-            height={16}
+            width={22}
+            height={22}
             className="shrink-0"
           />
-          <span className="h-px flex-1 bg-[#E8CFCB]" />
+          <span className="h-px flex-1 bg-[#C9828B]" />
         </div>
 
-        <p className={`${montserrat.className} mx-auto mt-5 max-w-[430px] text-[1rem] font-medium leading-8 text-[#2B2B2B]/70`}>
+        <p className={`${montserrat.className} mx-auto mt-5 max-w-[410px] text-xs font-medium leading-7 text-[#2B2B2B]/70`}>
           At Mums &amp; Mom Flower Shop, we create handcrafted bouquets
           with premium blooms and passion.
           <br />
@@ -104,7 +104,7 @@ export default function Home() {
           celebrate life&apos;s most beautiful moments.
         </p>
 
-        <p className={`${montserrat.className} mt-7 text-sm font-extrabold tracking-[0.18em] text-[#2B2B2B]`}>
+        <p className={`${montserrat.className} mt-6 text-xs font-extrabold tracking-[0.16em] text-[#2B2B2B]`}>
           ORDER NOW
         </p>
       </section>
