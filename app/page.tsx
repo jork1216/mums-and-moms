@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-import { heroSerif } from "./fonts";
+import { heroSerif, montserrat } from "./fonts";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return(
     <main className="mx-auto w-full max-w-[500px]">
       <Navbar />
-      <section className="hero-section overflow-hidden bg-[#F8F5F2] px-5 py-2  text-[#2B2B2B]">
+      <section className="hero-section overflow-hidden bg-[#f7eeee] px-5 py-2  text-[#2B2B2B]">
         <div className="relative grid min-h-50 grid-cols-[56%_44%] items-center">
           <div className="relative z-10 space-y-4">
           <div className="space-y-4">
@@ -76,6 +76,37 @@ export default function Home() {
             />
           </div>
         </div>
+      </section>
+      <section className="bg-[#FFFDFB] px-5 py-10 text-center text-[#2B2B2B]">
+        <h2 className={`${heroSerif.className} text-[2.55rem] leading-[1.08]`}>
+          Trusted Flower Shop for
+          <br />
+          <span className="text-[#C9828B]">Meaningful Gifting</span>
+        </h2>
+
+        <div className="mx-auto mt-4 flex w-32 items-center gap-3" aria-hidden="true">
+          <span className="h-px flex-1 bg-[#E8CFCB]" />
+          <Image
+            src="/heart.png"
+            alt=""
+            width={16}
+            height={16}
+            className="shrink-0"
+          />
+          <span className="h-px flex-1 bg-[#E8CFCB]" />
+        </div>
+
+        <p className={`${montserrat.className} mx-auto mt-5 max-w-[430px] text-[1rem] font-medium leading-8 text-[#2B2B2B]/70`}>
+          At Mums &amp; Mom Flower Shop, we create handcrafted bouquets
+          with premium blooms and passion.
+          <br />
+          Every arrangement is thoughtfully designed to help you
+          celebrate life&apos;s most beautiful moments.
+        </p>
+
+        <p className={`${montserrat.className} mt-7 text-sm font-extrabold tracking-[0.18em] text-[#2B2B2B]`}>
+          ORDER NOW
+        </p>
       </section>
     </main>
   );
