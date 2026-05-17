@@ -1,65 +1,82 @@
 import Image from "next/image";
 
+import { heroSerif } from "./fonts";
+import Navbar from "@/components/Navbar";
+
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+  return(
+    <main className="mx-auto w-full max-w-[500px]">
+      <Navbar />
+      <section className="hero-section overflow-hidden bg-[#F8F5F2] px-5 py-2  text-[#2B2B2B]">
+        <div className="relative grid min-h-50 grid-cols-[56%_44%] items-center">
+          <div className="relative z-10 space-y-4">
+          <div className="space-y-4">
+            <h1 className={`${heroSerif.className} text-[2.25rem] leading-[1.04]`}>
+              Handcrafted
+              <br />
+              <span className="inline-flex items-center gap-1.5 whitespace-nowrap text-[2.25rem]">
+                with Heart
+                <Image
+                  src="/bigheart.webp"
+                  alt=""
+                  width={34}
+                  height={34}
+                  className="mt-1 shrink-0"
+                />
+              </span>
+            </h1>
+            <div className="flex w-44 items-center gap-3" aria-hidden="true">
+              <span className="h-px flex-1 bg-[#C9828B]" />
+              <Image
+                src="/heart.png"
+                alt=""
+                width={22}
+                height={22}
+                className="shrink-0"
+              />
+              <span className="h-px flex-1 bg-[#C9828B]" />
+            </div>
+          </div>
+
+          <p className="max-w-xs text-xs leading-7 text-[#2B2B2B]/70">
+            Thoughtful blooms for life&apos;s beautiful moments.
+            <br />
+            Made with love, just for you.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
+            className="inline-flex items-center gap-3 rounded-xl bg-[#C9828B] px-5 py-3 text-xs font-semibold text-white shadow-sm"
           >
+            SHOP BLOOMS
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+              className="size-4"
+            >
+              <path
+                d="M5 12H19M13 6L19 12L13 18"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.8"
+              />
+            </svg>
+          </a>
+          </div>
+
+          <div className="relative z-0 ml-3 h-72 overflow-visible">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/bouquet.webp"
+              alt="Handcrafted floral bouquet"
+              fill
+              sizes="(max-width: 500px) 44vw, 220px"
+              className="translate-x-15 translate-y-5 scale-250 object-contain"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
