@@ -46,7 +46,7 @@ export default function Home() {
 
           <a
             href="#"
-            className="inline-flex items-center gap-3 rounded-xl bg-[#d35570] px-5 py-3 text-xs font-semibold text-white shadow-sm"
+            className="inline-flex items-center gap-3 rounded-xl border border-white bg-[#d35570] px-5 py-3 text-xs font-semibold text-white shadow-[0_8px_18px_rgba(211,85,112,0.32)]"
           >
             SHOP BLOOMS
             <svg
@@ -68,11 +68,18 @@ export default function Home() {
 
           <div className="relative z-0 ml-3 h-72 overflow-visible">
             <Image
+              src="/petals.png"
+              alt=""
+              fill
+              sizes="(max-width: 500px) 44vw, 220px"
+              className="z-0 translate-x-0 translate-y-2 scale-150 object-contain"
+            />
+            <Image
               src="/bouquet3.png"
               alt="Handcrafted floral bouquet"
               fill
               sizes="(max-width: 500px) 44vw, 220px"
-              className="translate-x-0 translate-y-2 scale-180 object-contain"
+              className="z-10 translate-x-0 translate-y-2 scale-180 object-contain"
             />
           </div>
         </div>
