@@ -30,7 +30,7 @@ export default function Navbar() {
           width={112}
           height={112}
           priority
-          className="h-full w-full scale-150 object-contain"
+          className="h-full w-full scale-150 object-contain contrast-130"
         />
       </div>
 
