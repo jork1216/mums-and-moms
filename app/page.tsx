@@ -46,7 +46,7 @@ export default function Home() {
 
           <a
             href="#"
-            className="inline-flex items-center gap-3 rounded-xl border border-white bg-[#d35570] px-5 py-3 text-xs font-semibold text-white shadow-[0_8px_18px_rgba(211,85,112,0.32)]"
+            className="inline-flex items-center gap-3 rounded-xl border-2 border-white bg-[#d35570] px-5 py-3 text-xs font-semibold text-white shadow-[0px_3px_0_#9ca3af]"
           >
             SHOP BLOOMS
             <svg
@@ -85,13 +85,17 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-[#FFFDFB] px-5 py-8 text-center text-[#2B2B2B]">
-        <h2 className={`${serifRegular.className} text-[1.80rem] leading-[1.08]`}>
+        <p className={`${montserrat.className} text-[0.62rem] font-extrabold tracking-[0.16em] text-[#d4516c]`}>
+          WHY CHOOSE US
+        </p>
+
+        <h2 className={`${serifRegular.className} mt-2 text-[1.50rem] font-semibold leading-[1.2]`}>
           Trusted Flower Shop for
           <br />
           <span className="font-semibold text-[#d4516c]">Meaningful Gifting</span>
         </h2>
 
-        <div className="mx-auto mt-4 flex w-44 items-center gap-3" aria-hidden="true">
+        <div className="mx-auto mt-3 flex w-44 items-center gap-3" aria-hidden="true">
           <span className="h-px flex-1 bg-[#C9828B]" />
           <Image
             src="/heart.png"
@@ -103,7 +107,7 @@ export default function Home() {
           <span className="h-px flex-1 bg-[#C9828B]" />
         </div>
 
-        <p className={`${montserrat.className} mx-auto mt-5 max-w-[410px] text-xs font-medium leading-7 text-[#2B2B2B]/70`}>
+        <p className={`${montserrat.className} mx-auto mt-3 max-w-[360px] text-[0.68rem] font-medium leading-5 text-[#2B2B2B]/75`}>
           At Mums &amp; Mom Flower Shop, we create handcrafted bouquets
           with premium blooms and passion.
           <br />
