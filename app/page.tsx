@@ -180,13 +180,11 @@ export default function Home() {
             <span className="h-px flex-1 bg-[#C9828B]" />
           </div>
 
-          <p className={`${montserrat.className} mx-auto mt-5 text-[0.78rem] font-medium leading-6 text-black/75`}>
+          <p className={`${montserrat.className} mx-auto mt-5 max-w-[350px] text-[0.78rem] font-medium leading-6 text-black/75`}>
             Whether pick-up or delivery, we serve fresh and well-arranged
             flowers just for you. We deliver flowers in Lucena City and nearby
-            areas in Quezon Province. With our same day delivery service, your
-            loved ones will surely get their flowers on time. If you want
-            something out of the ordinary, you may contact us or drop by our
-            shop to discuss and customize the combinations of flowers you want
+            areas in Quezon Province. You may contact us 
+            to discuss and customize the combinations of flowers you want
             for the arrangement.
           </p>
         </div>
