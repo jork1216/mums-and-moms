@@ -1,11 +1,22 @@
+export type ProductTag = "featured" | "latest";
+export type FlowerType =
+  | "sunflower"
+  | "dried flowers"
+  | "others"
+  | "roses"
+  | "lilies"
+  | "tulips";
+
 export type Product = {
   id: string;
   name: string;
   price: string;
   image: string;
+  flowerType: FlowerType;
+  tags: ProductTag[];
 };
 
-export type ProductTab = "featured" | "latest";
+export type ProductTab = ProductTag;
 
 export type ProductSection = {
   id: ProductTab;
@@ -13,98 +24,119 @@ export type ProductSection = {
   products: Product[];
 };
 
-const featuredProducts: Product[] = [
+export const products: Product[] = [
   {
-    id: "featured-1",
-    name: "Featured Product 1",
-    price: "\u20B13,000.00",
+    id: "product-1",
+    name: "Roses 1",
+    price: "\u20B11,250.00",
     image: "/bouquet3.png",
+    flowerType: "roses",
+    tags: ["featured"],
   },
   {
-    id: "featured-2",
-    name: "Featured Product 2",
-    price: "\u20B13,000.00",
+    id: "product-2",
+    name: "Sunflower 1",
+    price: "\u20B1850.00",
     image: "/bouquet3.png",
+    flowerType: "sunflower",
+    tags: ["featured"],
   },
   {
-    id: "featured-3",
-    name: "Featured Product 3",
-    price: "\u20B13,000.00",
+    id: "product-3",
+    name: "Dried Flowers 1",
+    price: "\u20B11,100.00",
     image: "/bouquet3.png",
+    flowerType: "dried flowers",
+    tags: ["featured"],
   },
   {
-    id: "featured-4",
-    name: "Featured Product 4",
-    price: "\u20B13,000.00",
+    id: "product-4",
+    name: "Tulips 1",
+    price: "\u20B11,450.00",
     image: "/bouquet3.png",
+    flowerType: "tulips",
+    tags: ["featured"],
   },
   {
-    id: "featured-5",
-    name: "Featured Product 5",
-    price: "\u20B13,000.00",
+    id: "product-5",
+    name: "Lilies 1",
+    price: "\u20B1750.00",
     image: "/bouquet3.png",
+    flowerType: "lilies",
+    tags: ["featured"],
   },
   {
-    id: "featured-6",
-    name: "Featured Product 6",
-    price: "\u20B13,000.00",
+    id: "product-6",
+    name: "Others 1",
+    price: "\u20B1600.00",
     image: "/bouquet3.png",
+    flowerType: "others",
+    tags: ["featured"],
+  },
+  {
+    id: "product-7",
+    name: "Tulips 2",
+    price: "\u20B11,350.00",
+    image: "/bouquet3.png",
+    flowerType: "tulips",
+    tags: ["latest"],
+  },
+  {
+    id: "product-8",
+    name: "Roses 2",
+    price: "\u20B1900.00",
+    image: "/bouquet3.png",
+    flowerType: "roses",
+    tags: ["latest"],
+  },
+  {
+    id: "product-9",
+    name: "Sunflower 2",
+    price: "\u20B11,500.00",
+    image: "/bouquet3.png",
+    flowerType: "sunflower",
+    tags: ["latest"],
+  },
+  {
+    id: "product-10",
+    name: "Lilies 2",
+    price: "\u20B11,050.00",
+    image: "/bouquet3.png",
+    flowerType: "lilies",
+    tags: ["latest"],
+  },
+  {
+    id: "product-11",
+    name: "Others 2",
+    price: "\u20B1500.00",
+    image: "/bouquet3.png",
+    flowerType: "others",
+    tags: ["latest"],
+  },
+  {
+    id: "product-12",
+    name: "Dried Flowers 2",
+    price: "\u20B11,200.00",
+    image: "/bouquet3.png",
+    flowerType: "dried flowers",
+    tags: ["latest"],
   },
 ];
 
-const latestProducts: Product[] = [
-  {
-    id: "latest-1",
-    name: "Latest Product 1",
-    price: "\u20B13,000.00",
-    image: "/bouquet3.png",
-  },
-  {
-    id: "latest-2",
-    name: "Latest Product 2",
-    price: "\u20B13,000.00",
-    image: "/bouquet3.png",
-  },
-  {
-    id: "latest-3",
-    name: "Latest Product 3",
-    price: "\u20B13,000.00",
-    image: "/bouquet3.png",
-  },
-  {
-    id: "latest-4",
-    name: "Latest Product 4",
-    price: "\u20B13,000.00",
-    image: "/bouquet3.png",
-  },
-  {
-    id: "latest-5",
-    name: "Latest Product 5",
-    price: "\u20B13,000.00",
-    image: "/bouquet3.png",
-  },
-  {
-    id: "latest-6",
-    name: "Latest Product 6",
-    price: "\u20B13,000.00",
-    image: "/bouquet3.png",
-  },
-];
+const getProductsByTag = (tag: ProductTag) =>
+  products.filter((product) => product.tags.includes(tag));
 
 export const productSections: ProductSection[] = [
   {
     id: "featured",
     label: "FEATURED PRODUCTS",
-    products: featuredProducts,
+    products: getProductsByTag("featured"),
   },
   {
     id: "latest",
     label: "LATEST PRODUCTS",
-    products: latestProducts,
+    products: getProductsByTag("latest"),
   },
 ];
 
-export const allProducts: Product[] = [
-  ...featuredProducts,
-  ...latestProducts,
-];
+export const allProducts: Product[] = products;

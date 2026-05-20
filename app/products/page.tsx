@@ -3,8 +3,7 @@ import Image from "next/image";
 
 import { montserrat, serifRegular } from "@/app/fonts";
 import Navbar from "@/components/Navbar";
-import ProductGrid from "@/components/ProductGrid";
-import { allProducts } from "@/data/products";
+import ProductCatalog from "@/components/ProductCatalog";
 
 export const metadata: Metadata = {
   title: "Products | Mums & Mom Flowershop",
@@ -64,15 +63,7 @@ export default function ProductsPage() {
       </section>
 
       <section className="px-5 pb-10 text-center">
-        <div className={`${montserrat.className} text-[#2B2B2B]`}>
-          <div className="flex items-center justify-center text-[0.68rem] font-bold tracking-[0.12em]">
-            <span className="border-b-2 border-[#d4516c] pb-1">
-              ALL PRODUCTS
-            </span>
-          </div>
-
-          <ProductGrid products={allProducts} />
-        </div>
+        <ProductCatalog />
       </section>
     </main>
   );
