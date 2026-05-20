@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import AnnouncementBar from "@/components/AnnouncementBar";
 
@@ -32,7 +33,11 @@ export default function Navbar({ showAnnouncement = true }: NavbarProps) {
           </svg>
         </button>
 
-        <div className="h-14 w-28 overflow-hidden">
+        <Link
+          href="/"
+          aria-label="Go to homepage"
+          className="h-14 w-28 overflow-hidden"
+        >
           <Image
             src="/logo-mums.jpg"
             alt="Mums & Mom Flowershop"
@@ -41,7 +46,7 @@ export default function Navbar({ showAnnouncement = true }: NavbarProps) {
             priority
             className="h-full w-full scale-[1.45] object-contain contrast-130"
           />
-        </div>
+        </Link>
 
         <div className="size-9" aria-hidden="true" />
       </nav>

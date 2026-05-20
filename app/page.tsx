@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { heroSerif, montserrat, serifRegular } from "./fonts";
 import Navbar from "@/components/Navbar";
@@ -45,8 +46,8 @@ export default function Home() {
               Made with love, just for you.
             </p>
 
-            <a
-              href="#"
+            <Link
+              href="/products"
               className="inline-flex items-center gap-2.5 rounded-2xl border-2 border-white bg-[#d35570] px-5 py-2.5 text-xs font-semibold text-white shadow-[0px_2px_0_#b94861]"
             >
               SHOP BLOOMS
@@ -64,7 +65,7 @@ export default function Home() {
                   strokeWidth="1.8"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
 
           <div className="relative z-0 ml-2 h-64 overflow-visible">
@@ -102,7 +103,7 @@ export default function Home() {
           className="pointer-events-none absolute right-[-3.25rem] top-1/2 w-28 -translate-y-1/2 scale-y-[-1] opacity-35"
           aria-hidden="true"
         />
-        <div className="relative z-10">
+        <div className="relative mt-5 z-10">
           <p className={`${montserrat.className} text-[0.62rem] font-extrabold tracking-[0.16em] text-[#d4516c]`}>
             WHY CHOOSE US
           </p>
