@@ -39,7 +39,7 @@ export default function Home() {
               </div>
             </div>
 
-            <p className="max-w-xs text-xs leading-5 text-black/70">
+            <p className="max-w-[250px] text-xs leading-5 text-black/70">
               Thoughtful blooms for life&apos;s beautiful moments.
               <br />
               Made with love, just for you.
