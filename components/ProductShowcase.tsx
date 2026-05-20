@@ -142,7 +142,7 @@ export default function ProductShowcase() {
       <div className="mt-7 grid grid-cols-2 gap-x-5 gap-y-7">
         {activeSection.products.map((product) => (
           <article key={product.id} className="text-center">
-            <div className="relative aspect-[1/1.32] overflow-hidden border border-[#f3d8dc] bg-[#fdf3f3]">
+            <div className="relative aspect-[1/1.32] overflow-hidden  bg-[#fdf3f3]">
               <Image
                 src={product.image}
                 alt={product.name}

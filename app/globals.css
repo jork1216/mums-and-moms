@@ -29,7 +29,7 @@ body {
   display: flex;
   height: 100%;
   width: max-content;
-  animation: announcement-marquee 25s linear infinite;
+  animation: announcement-marquee 90s linear infinite;
 }
 
 @keyframes announcement-marquee {
