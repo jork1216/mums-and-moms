@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { heroSerif, montserrat, serifRegular } from "./fonts";
 import Navbar from "@/components/Navbar";
+import ProductShowcase from "@/components/ProductShowcase";
 
 export default function Home() {
   return(
@@ -46,7 +47,7 @@ export default function Home() {
 
             <a
               href="#"
-              className="inline-flex items-center gap-2.5 rounded-full border-2 border-white bg-[#d35570] px-5 py-2.5 text-xs font-semibold text-white shadow-[0px_2px_0_#b94861]"
+              className="inline-flex items-center gap-2.5 rounded-2xl border-2 border-white bg-[#d35570] px-5 py-2.5 text-xs font-semibold text-white shadow-[0px_2px_0_#b94861]"
             >
               SHOP BLOOMS
               <svg
@@ -106,8 +107,8 @@ export default function Home() {
             WHY CHOOSE US
           </p>
 
-          <h2 className={`${serifRegular.className} mt-2 text-[1.625rem] font-semibold leading-[1.18]`}>
-            Trusted Flower Shop for
+          <h2 className={`${serifRegular.className} mt-2 text-[1.625rem] leading-[1.18]`}>
+            <span className={heroSerif.className}>Trusted Flower Shop for</span>
             <br />
             <span className="font-semibold text-[#d4516c]">Meaningful Gifting</span>
           </h2>
@@ -132,10 +133,14 @@ export default function Home() {
             celebrate life&apos;s most beautiful moments.
           </p>
 
-          <p className={`${montserrat.className} mt-7 text-xs font-extrabold tracking-[0.16em] text-[#2B2B2B]`}>
-            ORDER NOW
+          <p className={`${montserrat.className} mt-8 text-xs font-extrabold tracking-[0.16em] text-[#2B2B2B]`}>
+            ORDER NOW!
           </p>
         </div>
+      </section>
+
+      <section className="bg-[#FFFDFB] px-5 pb-10 text-center">
+        <ProductShowcase />
       </section>
     </main>
   );
