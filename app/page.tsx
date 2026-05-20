@@ -125,7 +125,7 @@ export default function Home() {
             <span className="h-px flex-1 bg-[#C9828B]" />
           </div>
 
-          <p className={`${montserrat.className} mx-auto mt-4 max-w-[400px] text-[0.68rem] font-medium leading-4.5 text-black/75`}>
+          <p className={`${montserrat.className} mx-auto mt-4 max-w-[380px] text-[0.68rem] font-medium leading-4.5 text-black/75`}>
             At Mums &amp; Mom Flower Shop, we create handcrafted bouquets
             with premium blooms and passion.
             <br />
