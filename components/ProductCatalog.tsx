@@ -4,19 +4,14 @@ import { useState } from "react";
 
 import { montserrat } from "@/app/fonts";
 import ProductGrid from "@/components/ProductGrid";
-import { products } from "@/data/products";
+import { flowerTypeOptions, products } from "@/data/products";
 import type { FlowerType } from "@/data/products";
 
 type ProductFilter = "all" | FlowerType;
 
 const productFilterOptions: { id: ProductFilter; label: string }[] = [
   { id: "all", label: "ALL PRODUCTS" },
-  { id: "sunflower", label: "SUNFLOWER" },
-  { id: "dried flowers", label: "DRIED FLOWERS" },
-  { id: "others", label: "OTHERS" },
-  { id: "roses", label: "ROSES" },
-  { id: "lilies", label: "LILIES" },
-  { id: "tulips", label: "TULIPS" },
+  ...flowerTypeOptions,
 ];
 
 export default function ProductCatalog() {
@@ -63,7 +58,7 @@ export default function ProductCatalog() {
           <div
             role="listbox"
             aria-label="Product filter"
-            className="absolute left-1/2 z-20 mt-3 w-44 -translate-x-1/2 border border-[#f0cbd2] bg-white py-2 text-center text-[0.64rem] font-bold uppercase tracking-[0.14em] shadow-[0_10px_24px_rgba(43,43,43,0.08)]"
+            className="absolute left-1/2 z-20 mt-3 w-52 -translate-x-1/2 border border-[#f0cbd2] bg-white py-2 text-[0.64rem] font-bold uppercase tracking-[0.14em] shadow-[0_10px_24px_rgba(43,43,43,0.08)]"
           >
             {productFilterOptions.map((option) => {
               const isActive = activeFilter === option.id;
@@ -78,11 +73,27 @@ export default function ProductCatalog() {
                     setActiveFilter(option.id);
                     setIsDropdownOpen(false);
                   }}
-                  className={`block w-full px-4 py-2 transition-colors hover:text-[#d4516c] ${
+                  className={`flex w-full items-center justify-between gap-3 px-4 py-2 text-left transition-colors hover:text-[#d4516c] ${
                     isActive ? "text-[#d4516c]" : "text-[#2B2B2B]"
                   }`}
                 >
-                  {option.label}
+                  <span>{option.label}</span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                    className={`size-3.5 shrink-0 ${
+                      isActive ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    <path
+                      d="M5 12.5L9.5 17L19 7"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2.2"
+                    />
+                  </svg>
                 </button>
               );
             })}

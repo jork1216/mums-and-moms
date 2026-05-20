@@ -24,6 +24,20 @@ export type ProductSection = {
   products: Product[];
 };
 
+export type FlowerTypeOption = {
+  id: FlowerType;
+  label: string;
+};
+
+export const flowerTypeOptions: FlowerTypeOption[] = [
+  { id: "dried flowers", label: "DRIED FLOWERS" },
+  { id: "lilies", label: "LILIES" },
+  { id: "roses", label: "ROSES" },
+  { id: "sunflower", label: "SUNFLOWER" },
+  { id: "tulips", label: "TULIPS" },
+  { id: "others", label: "OTHERS" },
+];
+
 export const products: Product[] = [
   {
     id: "product-1",
