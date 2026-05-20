@@ -42,7 +42,7 @@ export default function AnnouncementBar() {
               />
             </svg>
 
-            <span>Free Delivery on Orders Over &#8369;50</span>
+            <span>Free Delivery on Orders Over &#8369;850</span>
 
             <svg
               viewBox="0 0 24 24"
