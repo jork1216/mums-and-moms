@@ -13,14 +13,10 @@ export default function Home() {
       <Navbar />
       <section className="hero-section relative min-h-[18rem] overflow-hidden bg-[#fdf3f3] px-5 pb-7 pt-4 text-[#2B2B2B]">
         <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-          <Image
-            src="/petals.png"
-            alt=""
-            fill
-            sizes="(max-width: 500px) 100vw, 500px"
-            className="translate-x-[0%] translate-y-3 scale-[1.1] object-contain object-right-bottom"
+          <HeroBouquetSlideshow
+            petalsClassName="translate-x-[0%] translate-y-3 scale-[1.1]"
+            bouquetClassName="translate-x-[5%] translate-y-2 scale-[1.1]"
           />
-          <HeroBouquetSlideshow className="translate-x-[5%] translate-y-2 scale-[1.1]" />
         </div>
 
         <div className="relative z-10 flex min-h-[16rem] w-full items-center">

@@ -3,52 +3,66 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const bouquetSlides = [
+const heroSlides = [
   {
-    src: "/bouquet3.png",
-    alt: "",
+    petals: "/petals.png",
+    bouquet: "/bouquet3.png",
   },
   {
-    src: "/bouquet4.png",
-    alt: "",
+    petals: "/petalswhite.png",
+    bouquet: "/bouquet4.png",
   },
   {
-    src: "/bouquet5.png",
-    alt: "",
+    petals: "/petalsyellow.png",
+    bouquet: "/bouquet5.png",
   },
 ];
 
 type HeroBouquetSlideshowProps = {
-  className?: string;
+  bouquetClassName?: string;
+  petalsClassName?: string;
 };
 
 export default function HeroBouquetSlideshow({
-  className = "",
+  bouquetClassName = "",
+  petalsClassName = "",
 }: HeroBouquetSlideshowProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
-      setActiveIndex((currentIndex) => (currentIndex + 1) % bouquetSlides.length);
+      setActiveIndex((currentIndex) => (currentIndex + 1) % heroSlides.length);
     }, 7000);
 
     return () => window.clearInterval(intervalId);
   }, []);
 
   return (
-    <div className={`absolute inset-0 ${className}`}>
-      {bouquetSlides.map((slide, index) => (
-        <Image
-          key={slide.src}
-          src={slide.src}
-          alt={slide.alt}
-          fill
-          priority={index === 0}
-          sizes="(max-width: 500px) 100vw, 500px"
-          className={`object-contain object-right-bottom transition-opacity duration-1000 ease-in-out ${
+    <div className="absolute inset-0">
+      {heroSlides.map((slide, index) => (
+        <div
+          key={`${slide.petals}-${slide.bouquet}`}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
             index === activeIndex ? "opacity-100" : "opacity-0"
           }`}
-        />
+        >
+          <Image
+            src={slide.petals}
+            alt=""
+            fill
+            priority={index === 0}
+            sizes="(max-width: 500px) 100vw, 500px"
+            className={`z-0 object-contain object-right-bottom ${petalsClassName}`}
+          />
+          <Image
+            src={slide.bouquet}
+            alt=""
+            fill
+            priority={index === 0}
+            sizes="(max-width: 500px) 100vw, 500px"
+            className={`z-10 object-contain object-right-bottom ${bouquetClassName}`}
+          />
+        </div>
       ))}
     </div>
   );
