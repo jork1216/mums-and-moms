@@ -24,7 +24,7 @@ export default function Home() {
             alt=""
             fill
             sizes="(max-width: 500px) 100vw, 500px"
-            className="translate-x-[24%] translate-y-6 scale-[1.36] object-contain object-right-bottom"
+            className="translate-x-[5%] translate-y-6 scale-[1.1] object-contain object-right-bottom"
           />
         </div>
 
@@ -58,7 +58,7 @@ export default function Home() {
               </div>
             </div>
 
-            <p className="w-3/5 text-xs leading-5 text-black/70">
+            <p className="w-3/5 text-xs leading-5 text-black/70 [text-shadow:0_0_2px_#fff,0_0_6px_#fff,0_0_14px_rgba(255,255,255,0.95)]">
               Thoughtful blooms for life&apos;s beautiful moments.
               <br />
               Made with love, just for you.
