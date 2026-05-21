@@ -109,7 +109,7 @@ export default function Home() {
             WHY CHOOSE US
           </p>
 
-          <h2 className={`${serifRegular.className} mt-2 text-[1.625rem] leading-[1.18]`}>
+          <h2 className={`${serifRegular.className} mt-5 text-[1.625rem] leading-[1.18]`}>
             <span className={heroSerif.className}>Trusted Flower Shop in</span>
             <br />
             <span className="font-semibold text-[#d4516c]">Lucena City</span>
@@ -135,7 +135,7 @@ export default function Home() {
             celebrate life&apos;s most beautiful moments.
           </p>
 
-          <p className={`${montserrat.className} mt-8 text-xs font-extrabold tracking-[0.16em] text-[#2B2B2B]`}>
+          <p className={`${montserrat.className} mt-12 text-xs font-extrabold tracking-[0.16em] text-[#2B2B2B]`}>
             ORDER NOW!
           </p>
         </div>
