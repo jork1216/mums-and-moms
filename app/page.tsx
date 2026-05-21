@@ -17,7 +17,7 @@ export default function Home() {
             alt=""
             fill
             sizes="(max-width: 500px) 100vw, 500px"
-            className="translate-x-[20%] translate-y-5 scale-[1.18] object-contain object-right-bottom"
+            className="translate-x-[0%] translate-y-3 scale-[1.1] object-contain object-right-bottom"
           />
           <Image
             src="/bouquet3.png"
