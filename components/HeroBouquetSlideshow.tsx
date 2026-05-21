@@ -32,7 +32,7 @@ export default function HeroBouquetSlideshow({
   useEffect(() => {
     const intervalId = window.setInterval(() => {
       setActiveIndex((currentIndex) => (currentIndex + 1) % heroSlides.length);
-    }, 7000);
+    }, 5000);
 
     return () => window.clearInterval(intervalId);
   }, []);
