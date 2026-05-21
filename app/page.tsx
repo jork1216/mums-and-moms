@@ -31,7 +31,7 @@ export default function Home() {
         <div className="relative z-10 flex min-h-[16rem] w-full items-center">
           <div className="w-full space-y-4">
             <div className="space-y-3">
-              <h1 className={`${heroSerif.className} mt-2 text-[2.25rem] leading-[1.04]`}>
+              <h1 className={`${heroSerif.className} mt-2 text-[2.25rem] leading-[1.04] [text-shadow:0_0_2px_#fff,0_0_6px_#fff,0_0_14px_rgba(255,255,255,0.95)]`}>
                 Handcrafted
                 <br />
                 <span className="inline-flex items-center gap-1.5 whitespace-nowrap text-[2.25rem]">
