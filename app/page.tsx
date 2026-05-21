@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { heroSerif, montserrat, serifRegular } from "./fonts";
 import Footer from "@/components/Footer";
+import HeroBouquetSlideshow from "@/components/HeroBouquetSlideshow";
 import Navbar from "@/components/Navbar";
 import ProductShowcase from "@/components/ProductShowcase";
 
@@ -19,13 +20,7 @@ export default function Home() {
             sizes="(max-width: 500px) 100vw, 500px"
             className="translate-x-[0%] translate-y-3 scale-[1.1] object-contain object-right-bottom"
           />
-          <Image
-            src="/bouquet3.png"
-            alt=""
-            fill
-            sizes="(max-width: 500px) 100vw, 500px"
-            className="translate-x-[5%] translate-y-2 scale-[1.1] object-contain object-right-bottom"
-          />
+          <HeroBouquetSlideshow className="translate-x-[5%] translate-y-2 scale-[1.1]" />
         </div>
 
         <div className="relative z-10 flex min-h-[16rem] w-full items-center">
