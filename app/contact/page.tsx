@@ -4,14 +4,13 @@ import Image from "next/image";
 import { montserrat, serifRegular } from "@/app/fonts";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import ProductCatalog from "@/components/ProductCatalog";
 
 export const metadata: Metadata = {
-  title: "Products | Mums & Mom Flowershop",
-  description: "Browse all products from Mums & Mom Flowershop.",
+  title: "Contact Us | Mums & Mom Flowershop",
+  description: "Contact Mums & Mom Flowershop for help choosing the perfect blooms.",
 };
 
-export default function ProductsPage() {
+export default function ContactPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[500px] bg-[#FFFDFB]">
       <Navbar />
@@ -36,9 +35,7 @@ export default function ProductsPage() {
 
         <div className="relative z-10 mx-auto max-w-[400px]">
           <h1 className={`${serifRegular.className} text-[1.95rem] font-semibold leading-[1.12] text-[#2B2B2B]`}>
-            Fresh Flowers
-            <br />
-            <span className="italic text-[#d4516c]">delivered</span> daily.
+            Contact <span className="text-[#d4516c]">Us</span>
           </h1>
 
           <div className="mx-auto mt-4 flex w-36 items-center gap-3" aria-hidden="true">
@@ -54,17 +51,10 @@ export default function ProductsPage() {
           </div>
 
           <p className={`${montserrat.className} mx-auto mt-5 max-w-[350px] text-[0.78rem] font-medium leading-6 text-black/75`}>
-            Whether pick-up or delivery, we serve fresh and well-arranged
-            flowers just for you. We deliver flowers in Lucena City and nearby
-            areas in Quezon Province. You may contact us
-            to discuss and customize the combinations of flowers you want
-            for the arrangement.
+            We&apos;d love to help you choose the perfect blooms for every
+            special moment.
           </p>
         </div>
-      </section>
-
-      <section className="px-5 pb-10 text-center">
-        <ProductCatalog />
       </section>
 
       <Footer />

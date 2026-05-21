@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { heroSerif, montserrat, serifRegular } from "./fonts";
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import ProductShowcase from "@/components/ProductShowcase";
 
@@ -143,6 +144,8 @@ export default function Home() {
       <section className="bg-[#FFFDFB] px-5 pb-10 text-center">
         <ProductShowcase />
       </section>
+
+      <Footer />
     </main>
   );
 }

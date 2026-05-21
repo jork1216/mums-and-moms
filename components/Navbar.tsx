@@ -19,6 +19,7 @@ export default function Navbar({ showAnnouncement = true }: NavbarProps) {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/products", label: "Products" },
+    { href: "/contact", label: "Contacts" },
   ];
 
   return (
@@ -101,14 +102,6 @@ export default function Navbar({ showAnnouncement = true }: NavbarProps) {
                   </li>
                 );
               })}
-              <li>
-                <span
-                  aria-disabled="true"
-                  className="inline-block cursor-not-allowed pb-1 text-[#2B2B2B]"
-                >
-                  Contacts
-                </span>
-              </li>
             </ul>
           </nav>
         </div>
