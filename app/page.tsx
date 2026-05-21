@@ -10,9 +10,26 @@ export default function Home() {
   return(
     <main className="mx-auto w-full max-w-[500px]">
       <Navbar />
-      <section className="hero-section overflow-hidden bg-[#fdf3f3] px-5 pb-7 pt-4 text-[#2B2B2B]">
-        <div className="relative grid min-h-56 grid-cols-[56%_44%] items-center">
-          <div className="relative z-10 space-y-4">
+      <section className="hero-section relative min-h-[18rem] overflow-hidden bg-[#fdf3f3] px-5 pb-7 pt-4 text-[#2B2B2B]">
+        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+          <Image
+            src="/petals.png"
+            alt=""
+            fill
+            sizes="(max-width: 500px) 100vw, 500px"
+            className="translate-x-[20%] translate-y-5 scale-[1.18] object-contain object-right-bottom"
+          />
+          <Image
+            src="/bouquet3.png"
+            alt=""
+            fill
+            sizes="(max-width: 500px) 100vw, 500px"
+            className="translate-x-[24%] translate-y-6 scale-[1.36] object-contain object-right-bottom"
+          />
+        </div>
+
+        <div className="relative z-10 flex min-h-[16rem] w-full items-center">
+          <div className="w-full space-y-4">
             <div className="space-y-3">
               <h1 className={`${heroSerif.className} mt-2 text-[2.25rem] leading-[1.04]`}>
                 Handcrafted
@@ -41,7 +58,7 @@ export default function Home() {
               </div>
             </div>
 
-            <p className="max-w-[210px] text-xs leading-5 text-black/70">
+            <p className="w-3/5 text-xs leading-5 text-black/70">
               Thoughtful blooms for life&apos;s beautiful moments.
               <br />
               Made with love, just for you.
@@ -49,7 +66,7 @@ export default function Home() {
 
             <Link
               href="/products"
-              className="inline-flex items-center gap-2.5 rounded-2xl border-2 border-white bg-[#d35570] px-5 py-2.5 text-xs font-semibold text-white shadow-[0px_2px_0_#b94861]"
+              className="inline-flex w-fit min-w-[8.75rem] items-center justify-center gap-2.5 rounded-2xl border-2 border-white bg-[#d35570] px-5 py-2.5 text-xs font-semibold text-white shadow-[0px_2px_0_#b94861]"
             >
               SHOP BLOOMS
               <svg
@@ -67,23 +84,6 @@ export default function Home() {
                 />
               </svg>
             </Link>
-          </div>
-
-          <div className="relative z-0 ml-2 h-64 overflow-visible">
-            <Image
-              src="/petals.png"
-              alt=""
-              fill
-              sizes="(max-width: 500px) 44vw, 220px"
-              className="z-0 translate-y-2 scale-[1.35] object-contain"
-            />
-            <Image
-              src="/bouquet3.png"
-              alt="Handcrafted floral bouquet"
-              fill
-              sizes="(max-width: 500px) 44vw, 220px"
-              className="z-10 translate-y-2 scale-[1.65] object-contain"
-            />
           </div>
         </div>
       </section>
