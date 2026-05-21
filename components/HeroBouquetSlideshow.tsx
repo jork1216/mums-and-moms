@@ -12,6 +12,10 @@ const bouquetSlides = [
     src: "/bouquet4.png",
     alt: "",
   },
+  {
+    src: "/bouquet5.png",
+    alt: "",
+  },
 ];
 
 type HeroBouquetSlideshowProps = {
@@ -26,7 +30,7 @@ export default function HeroBouquetSlideshow({
   useEffect(() => {
     const intervalId = window.setInterval(() => {
       setActiveIndex((currentIndex) => (currentIndex + 1) % bouquetSlides.length);
-    }, 10000);
+    }, 7000);
 
     return () => window.clearInterval(intervalId);
   }, []);
