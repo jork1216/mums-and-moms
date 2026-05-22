@@ -4,11 +4,17 @@ import type { Product } from "@/data/products";
 
 type ProductGridProps = {
   products: Product[];
+  gridClassName?: string;
+  imageSizes?: string;
 };
 
-export default function ProductGrid({ products }: ProductGridProps) {
+export default function ProductGrid({
+  products,
+  gridClassName = "",
+  imageSizes = "(max-width: 500px) 45vw, 220px",
+}: ProductGridProps) {
   return (
-    <div className="mt-7 grid grid-cols-2 gap-x-5 gap-y-7">
+    <div className={`mt-7 grid grid-cols-2 gap-x-5 gap-y-7 ${gridClassName}`}>
       {products.map((product) => (
         <article key={product.id} className="text-center">
           <div className="relative aspect-[1/1.32] overflow-hidden bg-[#fdf3f3]">
@@ -16,7 +22,7 @@ export default function ProductGrid({ products }: ProductGridProps) {
               src={product.image}
               alt={product.name}
               fill
-              sizes="(max-width: 500px) 45vw, 220px"
+              sizes={imageSizes}
               className="scale-[1.28] object-contain"
             />
           </div>

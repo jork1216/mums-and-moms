@@ -52,8 +52,8 @@ export default function ProductCatalog() {
 
   return (
     <div className={`${montserrat.className} text-[#2B2B2B]`}>
-      <div className="flex items-start justify-center gap-5">
-        <div className="relative inline-block text-left text-[0.66rem] font-bold tracking-[0.1em]">
+      <div className="flex items-start justify-center gap-5 min-[501px]:gap-8">
+        <div className="relative inline-block text-left text-[0.66rem] font-bold tracking-[0.1em] min-[501px]:text-xs">
           <button
             type="button"
             aria-expanded={isFilterDropdownOpen}
@@ -130,7 +130,7 @@ export default function ProductCatalog() {
           )}
         </div>
 
-        <div className="relative inline-block text-left text-[0.6rem] font-bold tracking-[0.1em]">
+        <div className="relative inline-block text-left text-[0.6rem] font-bold tracking-[0.1em] min-[501px]:text-[0.68rem]">
           <button
             type="button"
             aria-expanded={isSortDropdownOpen}
@@ -208,7 +208,11 @@ export default function ProductCatalog() {
         </div>
       </div>
 
-      <ProductGrid products={sortedProducts} />
+      <ProductGrid
+        products={sortedProducts}
+        gridClassName="min-[501px]:mt-10 min-[501px]:grid-cols-3 min-[501px]:gap-x-6 min-[501px]:gap-y-9 min-[1025px]:grid-cols-4 min-[1025px]:gap-x-8 min-[1025px]:gap-y-10"
+        imageSizes="(max-width: 500px) 45vw, (max-width: 1024px) 30vw, 260px"
+      />
     </div>
   );
 }

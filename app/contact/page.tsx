@@ -73,16 +73,16 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="mx-auto min-h-screen w-full max-w-[500px] bg-[#FFFDFB]">
+    <main className="mx-auto min-h-screen w-full max-w-[500px] bg-[#FFFDFB] min-[501px]:max-w-[1024px] min-[1025px]:max-w-none">
       <Navbar />
 
-      <section className="relative overflow-hidden bg-[#FFFDFB] px-5 py-10 text-center text-[#2B2B2B]">
+      <section className="relative overflow-hidden bg-[#FFFDFB] px-5 py-10 text-center text-[#2B2B2B] min-[501px]:px-10 min-[501px]:py-16 min-[1025px]:px-12 min-[1025px]:py-20">
         <Image
           src="/floral.png"
           alt=""
           width={960}
           height={1639}
-          className="pointer-events-none absolute left-[-8rem] top-1/2 w-52 -translate-y-1/2 opacity-20"
+          className="pointer-events-none absolute left-[-8rem] top-1/2 w-52 -translate-y-1/2 opacity-20 min-[501px]:left-[-6rem] min-[501px]:w-60 min-[1025px]:left-[-3rem] min-[1025px]:w-72"
           aria-hidden="true"
         />
         <Image
@@ -90,53 +90,53 @@ export default function ContactPage() {
           alt=""
           width={960}
           height={1639}
-          className="pointer-events-none absolute right-[-8rem] top-1/2 w-52 -translate-y-1/2 scale-x-[-1] opacity-20"
+          className="pointer-events-none absolute right-[-8rem] top-1/2 w-52 -translate-y-1/2 scale-x-[-1] opacity-20 min-[501px]:right-[-6rem] min-[501px]:w-60 min-[1025px]:right-[-3rem] min-[1025px]:w-72"
           aria-hidden="true"
         />
 
-        <div className="relative z-10 mx-auto max-w-[400px]">
-          <h1 className={`${serifRegular.className} text-[1.95rem] font-semibold leading-[1.12] text-[#2B2B2B]`}>
+        <div className="relative z-10 mx-auto max-w-[400px] min-[501px]:max-w-[620px] min-[1025px]:max-w-[720px]">
+          <h1 className={`${serifRegular.className} text-[1.95rem] font-semibold leading-[1.12] text-[#2B2B2B] min-[501px]:text-[3rem] min-[1025px]:text-[3.5rem]`}>
             Contact <span className="text-[#d4516c]">Us</span>
           </h1>
 
-          <div className="mx-auto mt-4 flex w-36 items-center gap-3" aria-hidden="true">
+          <div className="mx-auto mt-4 flex w-36 items-center gap-3 min-[501px]:mt-5 min-[501px]:w-52" aria-hidden="true">
             <span className="h-px flex-1 bg-[#C9828B]" />
             <Image
               src="/heart.png"
               alt=""
               width={24}
               height={17}
-              className="h-auto w-6 shrink-0"
+              className="h-auto w-6 shrink-0 min-[501px]:w-8"
             />
             <span className="h-px flex-1 bg-[#C9828B]" />
           </div>
 
-          <p className={`${montserrat.className} mx-auto mt-5 max-w-[350px] text-[0.78rem] font-medium leading-6 text-black/75`}>
+          <p className={`${montserrat.className} mx-auto mt-5 max-w-[350px] text-[0.78rem] font-medium leading-6 text-black/75 min-[501px]:mt-6 min-[501px]:max-w-[560px] min-[501px]:text-sm min-[501px]:leading-7`}>
             We&apos;d love to help you choose the perfect blooms for every
             special moment.
           </p>
         </div>
       </section>
 
-      <section className={`${montserrat.className} bg-[#FFFDFB] px-5 pb-12 text-[#2B2B2B]`}>
-        <div className="mx-auto flex max-w-[360px] flex-col gap-3">
+      <section className={`${montserrat.className} bg-[#FFFDFB] px-5 pb-12 text-[#2B2B2B] min-[501px]:px-10 min-[501px]:pb-16 min-[1025px]:px-12`}>
+        <div className="mx-auto grid max-w-[360px] grid-cols-1 gap-3 min-[501px]:max-w-[760px] min-[501px]:grid-cols-2 min-[501px]:gap-4 min-[1025px]:max-w-[920px]">
           {contactCards.map((card) => (
             <article
               key={card.title}
-              className="flex items-center gap-4 rounded-2xl border border-[#f3cfd4] bg-white/90 px-4 py-3 text-left shadow-[0_8px_18px_rgba(212,81,108,0.07)]"
+              className="flex items-center gap-4 rounded-2xl border border-[#f3cfd4] bg-white/90 px-4 py-3 text-left shadow-[0_8px_18px_rgba(212,81,108,0.07)] min-[501px]:px-5 min-[501px]:py-4"
             >
-              <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#d4516c] text-white shadow-[0_2px_0_#bf405a] ring-2 ring-[#f7dbe0]">
-                <svg viewBox="0 0 24 24" aria-hidden="true" className="size-5">
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#d4516c] text-white shadow-[0_2px_0_#bf405a] ring-2 ring-[#f7dbe0] min-[501px]:size-12">
+                <svg viewBox="0 0 24 24" aria-hidden="true" className="size-5 min-[501px]:size-6">
                   {card.icon}
                 </svg>
               </div>
 
               <div className="min-w-0">
-                <h2 className={`${serifBold.className} text-[1.08rem] font-bold leading-tight`}>
+                <h2 className={`${serifBold.className} text-[1.08rem] font-bold leading-tight min-[501px]:text-[1.2rem]`}>
                   {card.title}
                 </h2>
 
-                <p className="mt-1 truncate text-[0.78rem] font-medium leading-5 text-black/70">
+                <p className="mt-1 truncate text-[0.78rem] font-medium leading-5 text-black/70 min-[501px]:text-[0.84rem]">
                   {card.detail}
                 </p>
               </div>
@@ -145,33 +145,33 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className={`${montserrat.className} bg-[#FFFDFB] px-5 pb-12 text-center text-[#2B2B2B]`}>
-        <div className="mx-auto max-w-[400px]">
-          <h2 className={`${serifRegular.className} text-[1.95rem] font-semibold leading-[1.12] text-[#2B2B2B]`}>
+      <section className={`${montserrat.className} bg-[#FFFDFB] px-5 pb-12 text-center text-[#2B2B2B] min-[501px]:px-10 min-[501px]:pb-16 min-[1025px]:px-12 min-[1025px]:pb-20`}>
+        <div className="mx-auto max-w-[400px] min-[501px]:max-w-[900px]">
+          <h2 className={`${serifRegular.className} text-[1.95rem] font-semibold leading-[1.12] text-[#2B2B2B] min-[501px]:text-[3rem] min-[1025px]:text-[3.5rem]`}>
             Connect With <span className="text-[#d4516c]">Us</span>
           </h2>
 
-          <div className="mx-auto mt-4 flex w-36 items-center gap-3" aria-hidden="true">
+          <div className="mx-auto mt-4 flex w-36 items-center gap-3 min-[501px]:mt-5 min-[501px]:w-52" aria-hidden="true">
             <span className="h-px flex-1 bg-[#C9828B]" />
             <Image
               src="/heart.png"
               alt=""
               width={24}
               height={17}
-              className="h-auto w-6 shrink-0"
+              className="h-auto w-6 shrink-0 min-[501px]:w-8"
             />
             <span className="h-px flex-1 bg-[#C9828B]" />
           </div>
 
-          <p className="mx-auto mt-5 max-w-[350px] text-[0.78rem] font-medium leading-6 text-black/75">
+          <p className="mx-auto mt-5 max-w-[350px] text-[0.78rem] font-medium leading-6 text-black/75 min-[501px]:mt-6 min-[501px]:max-w-[560px] min-[501px]:text-sm min-[501px]:leading-7">
             Message us anytime on our social channels.
           </p>
 
-          <div className="mt-6 flex flex-col gap-3">
+          <div className="mt-6 grid grid-cols-1 gap-3 min-[501px]:mt-8 min-[501px]:grid-cols-3 min-[501px]:gap-4">
             {socialChannels.map((channel) => (
               <article
                 key={channel.title}
-                className="flex items-center gap-4 rounded-full border border-[#f3a6b8] bg-white/90 px-4 py-3 text-left shadow-[0_8px_18px_rgba(212,81,108,0.07)]"
+                className="flex items-center gap-4 rounded-full border border-[#f3a6b8] bg-white/90 px-4 py-3 text-left shadow-[0_8px_18px_rgba(212,81,108,0.07)] min-[501px]:gap-3 min-[501px]:px-4 min-[501px]:py-3.5"
               >
                 <div className="flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white">
                   <Image

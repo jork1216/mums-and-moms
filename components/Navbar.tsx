@@ -26,13 +26,13 @@ export default function Navbar({ showAnnouncement = true }: NavbarProps) {
     <header className="sticky top-0 z-50 w-full bg-white">
       {showAnnouncement && <AnnouncementBar />}
 
-      <nav className="flex h-16 w-full items-center justify-between px-5">
+      <nav className="flex h-16 w-full items-center justify-between px-5 min-[501px]:px-10 min-[1025px]:px-12">
         <button
           type="button"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen((open) => !open)}
-          className="size-9"
+          className="size-9 min-[501px]:hidden"
         >
           <svg
             viewBox="0 0 24 24"
@@ -61,7 +61,7 @@ export default function Navbar({ showAnnouncement = true }: NavbarProps) {
         <Link
           href="/"
           aria-label="Go to homepage"
-          className="h-14 w-28 overflow-hidden"
+          className="h-14 w-28 overflow-hidden min-[501px]:h-16 min-[501px]:w-32"
         >
           <Image
             src="/logo-mums.jpg"
@@ -73,12 +73,36 @@ export default function Navbar({ showAnnouncement = true }: NavbarProps) {
           />
         </Link>
 
-        <div className="size-9" aria-hidden="true" />
+        <nav
+          aria-label="Primary navigation"
+          className={`${montserrat.className} hidden items-center gap-8 text-[0.78rem] font-extrabold uppercase tracking-[0.16em] min-[501px]:flex min-[1025px]:gap-10 min-[1025px]:text-[0.84rem]`}
+        >
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={isActive ? "page" : undefined}
+                className={`border-b-2 pb-1 transition-colors ${
+                  isActive
+                    ? "border-[#d4516c] text-[#d4516c]"
+                    : "border-transparent text-[#2B2B2B] hover:text-[#d4516c]"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </nav>
+
+        <div className="size-9 min-[501px]:hidden" aria-hidden="true" />
       </nav>
 
       {isMenuOpen && (
         <div
-          className={`${menuTopClass} fixed inset-x-0 bottom-0 z-[40] overflow-y-auto bg-white px-8 pt-9 text-[#2B2B2B]`}
+          className={`${menuTopClass} fixed inset-x-0 bottom-0 z-[40] overflow-y-auto bg-white px-8 pt-9 text-[#2B2B2B] min-[501px]:hidden`}
         >
           <nav aria-label="Main menu" className={montserrat.className}>
             <ul className="space-y-6 text-left text-[0.92rem] font-extrabold uppercase tracking-[0.16em]">

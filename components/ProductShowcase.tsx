@@ -37,7 +37,11 @@ export default function ProductShowcase() {
         })}
       </div>
 
-      <ProductGrid products={activeSection.products} />
+      <ProductGrid
+        products={activeSection.products}
+        gridClassName="min-[501px]:grid-cols-3 min-[501px]:gap-x-6 min-[501px]:gap-y-9 min-[1025px]:gap-x-8"
+        imageSizes="(max-width: 500px) 45vw, (max-width: 1024px) 30vw, 220px"
+      />
     </div>
   );
 }

@@ -51,7 +51,7 @@ export default function HeroBouquetSlideshow({
             alt=""
             fill
             priority={index === 0}
-            sizes="(max-width: 500px) 100vw, 500px"
+            sizes="(max-width: 500px) 100vw, (max-width: 1024px) 1024px, 1200px"
             className={`z-0 object-contain object-right-bottom ${petalsClassName}`}
           />
           <Image
@@ -59,7 +59,7 @@ export default function HeroBouquetSlideshow({
             alt=""
             fill
             priority={index === 0}
-            sizes="(max-width: 500px) 100vw, 500px"
+            sizes="(max-width: 500px) 100vw, (max-width: 1024px) 1024px, 1200px"
             className={`z-10 object-contain object-right-bottom ${bouquetClassName}`}
           />
         </div>
